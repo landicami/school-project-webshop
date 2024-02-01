@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bortakväll</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="text-white">
+    <header class="">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Hem</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#anchorlink">Produkter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#anchorlinkkontakt">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h1 class="text-center">Vi har allt för din bortakväll!</h1>
+    </header>
+
+    <div class="container" id="anchorlink">
+      <div class="numberofproducts text-black"></div>
+      <div class="row godis-container"></div>
+    </div>
+
+    <!--Offcanvas-->
+    <button
+      class="btn btn-primary fixed-end varukorg"
+      type="button"
+      data-bs-toggle="offcanvas"
+      id="btncandycounter"
+      data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight"
+    >
+      Get candy<br />
+      <span id="candycounterHtml">0</span>
+    </button>
+    <div
+      class="offcanvas offcanvas-end"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Varukorg</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <ul class="offcanvas-body"></ul>
+
+      <div id="cashtotal">Totala summan</div>
+      <div id="checkoutbutton">
+        <button
+          class="btn btn-outline-success m-2"
+          id="btnkassa"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          Gå till kassan
+        </button>
+        <button class="btn-trash btn btn-outline-danger m-2" id="btntrashid">
+          Töm varukorgen
+        </button>
+      </div>
+    </div>
+
+    <!-- Popup vid klick på info-knapp -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content text-black">
+          <div class="modal-header">
+            <h5 class="modal-title text-black" id="exampleModalLabel">
+              Modal title
+            </h5>
+            <button
+              type="button"
+              class="close btn btn-secondary"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body- text-black p-2"></div>
+
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Köpsida-->
+    <div class="buypage flex-container d-none">
+      <div class="container mt-5 flex-items">
+        <form id="formOrder">
+          <!-- Namn -->
+          <div class="mb-3">
+            <label for="firstName" class="form-label">Förnamn</label>
+            <input type="text" class="form-control" id="firstName" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="lastName" class="form-label">Efternamn</label>
+            <input type="text" class="form-control" id="lastName" required />
+          </div>
+
+          <!-- Adress -->
+          <div class="mb-3">
+            <label for="address" class="form-label">Adress</label>
+            <input type="text" class="form-control" id="address" required />
+          </div>
+
+          <!-- Postnummer -->
+          <div class="mb-3">
+            <label for="postalCode" class="form-label"
+              >Postnr (max 6 tecken)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="postalCode"
+              maxlength="6"
+              required
+            />
+          </div>
+
+          <!-- Ort -->
+          <div class="mb-3">
+            <label for="city" class="form-label">Ort</label>
+            <input type="text" class="form-control" id="city" required />
+          </div>
+
+          <!-- Telefon -->
+          <div class="mb-3">
+            <label for="phone" class="form-label">Telefon</label>
+            <input type="tel" class="form-control" id="phone" />
+          </div>
+
+          <!-- E-post -->
+          <div class="mb-3">
+            <label for="email" class="form-label">E-post</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+
+          <!-- Submit-knapp -->
+          <button id="sendOrder" type="submit" class="btn btn-primary">
+            Skicka beställning
+          </button>
+          <button class="btn btn-warning" id="removebuypage" type="button">
+            Fortsätt handla
+          </button>
+        </form>
+      </div>
+      <ul class="orderinfo flex-items"></ul>
+      <div class="flex-items"></div>
+      <div id="checkouttotal" class="flex-items"></div>
+    </div>
+
+    <div class="confirmpage d-none">
+      <div class="confirmpage2"></div>
+      <button class="btn btn-primary handlamerknapp">Handla mer</button>
+    </div>
+    <footer class="bg-dark text-white p-5 mt-5">
+      <div class="container" id="anchorlinkkontakt">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>Kontakt</h2>
+            <p>Adress: Din Adress, 123 45 Staden</p>
+            <p>Telefon: 123-456-789</p>
+            <p>Email: info@bortakvall.se</p>
+          </div>
+          <div class="col-md-6">
+            <h2>Ställ en fråga</h2>
+            <form action="#" method="post">
+              <div class="mb-3">
+                <label for="questionName" class="text-white form-label"
+                  >Ditt namn</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="questionName"
+                  name="questionName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="questionEmail" class="text-white form-label"
+                  >Din e-post</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="questionEmail"
+                  name="questionEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="questionMessage" class="text-white form-label"
+                  >Din fråga</label
+                >
+                <textarea
+                  class="form-control"
+                  id="questionMessage"
+                  name="questionMessage"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Skicka fråga
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+    <!-- Har lagt till bootstrap javascript för att få offcanvas att fungera-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-# school-project-webshop
+This is a school project where the purpose was to create a webshop where a customer could put somehting in a varukorg, store it in localstorage, go to kassan, and make an order to an API

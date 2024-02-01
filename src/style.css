@@ -1,0 +1,363 @@
+:root {
+  --bakgrund: #66f2d6;
+}
+
+h1 {
+  font-family: "Rubik Doodle Shadow", sans-serif;
+  font-size: 4rem;
+  /*   box-shadow: 0px 50px 20px var(--bakgrund); */
+}
+h2 {
+  font-family: "Rubik Doodle Shadow", sans-serif;
+  margin-bottom: 3rem;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.varukorg {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+
+.removebild {
+  margin-left: auto;
+}
+
+.removebild > img:hover {
+  animation: shake 2s;
+  animation-iteration-count: 1;
+  cursor: pointer;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 1px, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(1px, 0, 1px);
+  }
+}
+.candycounter {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 2px;
+  margin: 5px;
+}
+.korg-bild {
+  height: 75px;
+  width: 75px;
+  border: 4px solid var(--bakgrund);
+  box-shadow: 4px 4px 10px rgb(98, 98, 98);
+  margin-bottom: 5px;
+}
+.offcanvas {
+  width: 45% !important;
+  border-radius: 20px 0px 0px 20px;
+}
+ul {
+  list-style-type: none;
+  margin-bottom: 0.1rem;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+strong {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+#checkoutbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btnkassa,
+#btntrashid {
+  width: 15rem;
+}
+.mb-3 {
+  margin-bottom: 0rem !important;
+}
+.form-control {
+  padding: 0;
+}
+#offcanvasRight > div.offcanvas-body > div > form > button {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#cashtotal {
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  text-align: right;
+  font-size: medium;
+
+  border-top: 1px solid gray;
+}
+.buypage {
+  background-color: var(--bakgrund);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#formOrder {
+  background-color: white;
+}
+
+.body > div.buypage > div {
+  border: 0px;
+}
+hr {
+  margin: 2px 0 2px 0;
+  padding: 0;
+}
+#formOrder {
+  width: 100%;
+  height: 33rem;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+}
+
+.orderinfo {
+  background-color: rgb(255, 255, 255);
+  height: 33rem;
+  overflow-y: scroll;
+}
+
+.confirmpage {
+  background-color: var(--bakgrund);
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: center;
+  padding-top: 20rem;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.flex-container {
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.flex-items:nth-child(1) {
+  display: block;
+  width: 50%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+#sendOrder,
+#removebuypage {
+  margin-top: 2rem;
+}
+#sendOrder {
+  background-color: #d666f2;
+  border: 0px;
+}
+#sendOrder:hover,
+#removebuypage:hover {
+  background-color: #31d2f2;
+}
+
+#removebuypage {
+  float: right;
+  background-color: #f2d666;
+  border: 0px;
+}
+.handlamerknapp {
+  background-color: #d666f2;
+  border: 0;
+}
+.handlamerknapp:hover {
+  background-color: #31d2f2;
+}
+
+.flex-items:nth-child(2) {
+  display: block;
+  width: 50%;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  margin-top: 3rem;
+  border: 1px solid black;
+  border-radius: 10px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+.flex-items:nth-child(3) {
+  display: block;
+  width: 50%;
+  padding-top: 2rem;
+
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+.flex-items:nth-child(4) {
+  display: block;
+  width: 50%;
+  padding-top: 2rem;
+
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+#checkouttotal {
+  text-align: right;
+  padding: 2rem 1rem 2rem 0;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.totalRight {
+  width: 20vw;
+  text-align: right;
+}
+
+@media screen and (max-width: 1150px) {
+  .offcanvas {
+    width: 80% !important;
+  }
+  .flex-items:nth-child(1) {
+    width: 100%;
+    order: 3;
+  }
+  .flex-items:nth-child(2) {
+    width: 100%;
+    margin: 2rem 1rem 0 1rem;
+    order: 1;
+  }
+  .flex-items:nth-child(3) {
+    width: 100%;
+    order: 4;
+  }
+  .flex-items:nth-child(4) {
+    width: 100%;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body > div.buypage.flex-container > ul > li {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+  }
+  
+  #offcanvasRight > ul > li {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+  }
+  .removebild {
+    margin-left: 0;
+  }
+}
+header {
+  width: 100%;
+  height: 20vh;
+  background-size: contain;
+  background-color: var(--bakgrund);
+  margin-bottom: 20vh;
+  color: black;
+  box-shadow: 0px 50px 20px var(--bakgrund);
+}
+.card-background {
+  background-color: var(--bakgrund);
+  /* border-bottom: 2px solid black; */
+  box-shadow: 0px 7px 20px rgb(35, 35, 35);
+}
+nav {
+  background-color: var(--bakgrund);
+  color: black;
+}
+.nav-link {
+  color: rgb(47, 47, 47);
+  font-weight: 600;
+}
+.godisInfo {
+  background-color: #f2d666;
+  border: 0;
+}
+
+.godisInfo:hover {
+  background-color: #31d2f2;
+}
+.putInVarukorgButton {
+  background-color: #d666f2;
+  border: 0;
+}
+.putInVarukorgButton:active,
+.godisInfo:active {
+  transform: translate(3px, 3px);
+}
+#exampleModalCenter > div > div > div.modal-header > button {
+  background-color: #d666f2;
+  border: 0px;
+}
+
+#btncandycounter {
+  background-color: #d666f2;
+  border: 0;
+  box-shadow: 4px 4px 10px rgb(98, 98, 98);
+}
+#btncandycounter:hover {
+  background-color: #31d2f2;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-family: "Rubik Doodle Shadow", sans-serif;
+    font-size: 3rem;
+  }
+}
