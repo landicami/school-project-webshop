@@ -42,6 +42,18 @@
             </ul>
           </div>
         </div>
+        <button
+      class="btn btn-primary fixed-end varukorg"
+      type="button"
+      data-bs-toggle="offcanvas"
+      id="btncandycounter"
+      data-bs-target="#offcanvasRight"
+      aria-controls="offcanvasRight"
+      aria-label="Tryck för att öppna varukorgen"
+    >
+      Get candy<br />
+      <span id="candycounterHtml">0</span>
+    </button>
       </nav>
       <h1 class="text-center">Vi har allt för din bortakväll!</h1>
     </header>
@@ -52,17 +64,7 @@
     </div>
 
     <!--Offcanvas-->
-    <button
-      class="btn btn-primary fixed-end varukorg"
-      type="button"
-      data-bs-toggle="offcanvas"
-      id="btncandycounter"
-      data-bs-target="#offcanvasRight"
-      aria-controls="offcanvasRight"
-    >
-      Get candy<br />
-      <span id="candycounterHtml">0</span>
-    </button>
+    
     <div
       class="offcanvas offcanvas-end"
       data-bs-scroll="true"
@@ -76,7 +78,7 @@
           type="button"
           class="btn-close"
           data-bs-dismiss="offcanvas"
-          aria-label="Close"
+          aria-label="Stäng varukorgen"
         ></button>
       </div>
 
